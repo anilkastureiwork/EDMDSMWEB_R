@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-25T20:43:00 IST" name="Suite" finished-at="2023-10-25T21:03:58 IST" duration-ms="1257878">
+    <groups>
+      <group name="Sanity">
+        <method signature="RSContractorProjectSubmitTest.rsCustomerRegistration_ContractorProjectSubmitcase(java.util.HashMap)[pri:3, instance:com.edm_dsm_web.testcases.RSContractorProjectSubmitTest@2767e23c]" name="rsCustomerRegistration_ContractorProjectSubmitcase" class="com.edm_dsm_web.testcases.RSContractorProjectSubmitTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="RSContractorProjectSubmitTest.rsCustomerRegistration_ContractorProjectSubmitcase(java.util.HashMap)[pri:3, instance:com.edm_dsm_web.testcases.RSContractorProjectSubmitTest@2767e23c]" name="rsCustomerRegistration_ContractorProjectSubmitcase" class="com.edm_dsm_web.testcases.RSContractorProjectSubmitTest"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="RSContractorProjectSubmitTest.rsCustomerRegistration_ContractorProjectSubmitcase(java.util.HashMap)[pri:3, instance:com.edm_dsm_web.testcases.RSContractorProjectSubmitTest@2767e23c]" name="rsCustomerRegistration_ContractorProjectSubmitcase" class="com.edm_dsm_web.testcases.RSContractorProjectSubmitTest"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2023-10-25T20:43:00 IST" name="Test" finished-at="2023-10-25T21:03:58 IST" duration-ms="1257878">
+      <class name="com.edm_dsm_web.testcases.RSContractorProjectSubmitTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.edm_dsm_web.testcases.RSContractorProjectSubmitTest@2767e23c]" started-at="2023-10-25T20:43:00 IST" name="loadConfig" finished-at="2023-10-25T20:43:00 IST" duration-ms="488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.edm_dsm_web.testcases.RSContractorProjectSubmitTest@2767e23c]" started-at="2023-10-25T20:43:01 IST" name="setup" finished-at="2023-10-25T20:43:04 IST" duration-ms="2582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="rsCustomerRegistration_ContractorProjectSubmitcase(java.util.HashMap)[pri:3, instance:com.edm_dsm_web.testcases.RSContractorProjectSubmitTest@2767e23c]" started-at="2023-10-25T20:43:04 IST" name="rsCustomerRegistration_ContractorProjectSubmitcase" data-provider="RS_ContractorProject" finished-at="2023-10-25T21:03:57 IST" duration-ms="1253207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{DuctSystem=yes, GeothermalHeatPump=yes, DuctInsulationCondition=Excellent, AtticIntialR=30, DualFuelHeatPump=yes, AirLeakage=Average, AirBasementSealed=Yes, DuctCondition=Average, DuctSystemSize=2, DuctFinanced=Yes, PhoneNo=1-234-555-9876, DuctLocationWork=Attic, QuantityInstalled=1, Replacement Size=50-60 Gals, AtticTypeInsulation=Blown, WallInsulation=yes, IndoorModelNumber=4444, AirCeilingSealed=Yes, TuneUp=yes, OldSystemType=Heat Pump, CentralAirConditioning=yes, LastName_R=ak, ValidLoginID=anilk.admin, HouseNo=3115, MiniSplit=yes, OldSystemAge=2-5 Years, LastName=ak, OldWindowType=Single, AtticCoverage=200, AirSealing=yes, SelectedProgram=I1129740, DuctType=Ducted, AtticInsulation=yes, WaterHeating=yes, AHRICertificateNumber=8888, Btu=777, AirWalls=Yes, DuctFinancedAmount=50, SystemRating=SEER, SEER/EER=22, ValidPass=Demo@1234, CustomerHomeAddress=106 Everest Cir, Oak Ridge, TN 37830, DuctInstalDate=10/03/2023, OutdoorModelNumber=9999, FloorInsulation=yes, StormWindow=, DuctSealingMaterial=Mastic, NewSystemBrand=23, DuctSealed=Yes, CustomerEmail=rebate1.ak@noemail.com, CustomerRegistration=new, DuctFinancedBy=VMF Off-Bill, ContValidPass=Demo@1234, ReplacementType=Gas, AirAttachGarage=Yes, Window=yes, Packaged=Packaged, COP=5, ZipCode=38118, FirstName=rebate1, DuctInstalCost=500, Replacement Space=Conditioned, SquareFootageInstalled=111, ContValidLoginID=contractor.auto@yopmail.com, AirSourceHeatPump=yes, AtticFinalR=200, UpgradeID=I1129723, TVAPreferredAirSource=yes}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rsCustomerRegistration_ContractorProjectSubmitcase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.edm_dsm_web.testcases.RSContractorProjectSubmitTest@2767e23c]" started-at="2023-10-25T21:03:57 IST" name="tearDown" finished-at="2023-10-25T21:03:58 IST" duration-ms="443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.edm_dsm_web.testcases.RSContractorProjectSubmitTest@2767e23c]" started-at="2023-10-25T21:03:58 IST" name="afterSuite" finished-at="2023-10-25T21:03:58 IST" duration-ms="379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.edm_dsm_web.testcases.RSContractorProjectSubmitTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" parallel="classes" thread-count="2">
+	<listeners>
+		<listener class-name="com.edm_dsm_web.utility.ListenerClass"></listener>
+	</listeners>
+	<test thread-count="4" name="Smoke">
+		<parameter name="browser" value="Chrome"></parameter>
+		<groups>
+			<run>
+				<include name="Smoke"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.edm_dsm_web.testcases.AdminAccountLoginPageTest" />
+			<class name="com.edm_dsm_web.testcases.RsRegistrationtestTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
