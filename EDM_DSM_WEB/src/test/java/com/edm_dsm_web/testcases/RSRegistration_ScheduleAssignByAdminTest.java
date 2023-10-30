@@ -75,22 +75,22 @@ public class RSRegistration_ScheduleAssignByAdminTest extends BaseEDM {
 //		Log.endTestCase("rsRegistrationStep1");
 //	}
 //
-	@Test(priority = 4, groups = { "Smoke",
-			"Sanity" }, dataProvider = "RS_Registration_Admin", dataProviderClass = DataProviderEDM.class)
-	public void rsRegistrationCompleteCase(HashMap<String, String> hashMapValue) throws Throwable {
-		getDriver().get(prop.getProperty("dev_customer_url"));
-		Log.startTestCase("rsRegistrationtest Test");
-		rsreg = new RsCustomerRegistrationSteps();
-		rsreg.RsRegistrationStep1_Step2Complete(hashMapValue.get("HomeAddress"), hashMapValue.get("CompanyName"),
-				hashMapValue.get("FirstName"), hashMapValue.get("LastName"), hashMapValue.get("PhoneNo"),
-				hashMapValue.get("Email"));
-//		String evalid = getDriver().findElement(By.xpath("//span[@style=\"font-weight:600\"]")).getText();
-//		System.out.println(evalid);
-//		newWriteToExcelLibrary = new NewWriteToExcelLibrary();
-//		newWriteToExcelLibrary.setValues(1, 24, evalid);
-//		Assert.assertTrue(rsreg.rsRegistrationValidation(getDriver()));
-		Log.endTestCase("rsRegistrationtest Test");
-	}
+//	@Test(priority = 4, groups = { "Smoke",
+//			"Sanity" }, dataProvider = "RS_Registration_Admin", dataProviderClass = DataProviderEDM.class)
+//	public void rsRegistrationCompleteCase(HashMap<String, String> hashMapValue) throws Throwable {
+//		getDriver().get(prop.getProperty("dev_customer_url"));
+//		Log.startTestCase("rsRegistrationtest Test");
+//		rsreg = new RsCustomerRegistrationSteps();
+//		rsreg.RsRegistrationStep1_Step2Complete(hashMapValue.get("HomeAddress"), hashMapValue.get("CompanyName"),
+//				hashMapValue.get("FirstName"), hashMapValue.get("LastName"), hashMapValue.get("PhoneNo"),
+//				hashMapValue.get("Email"));
+////		String evalid = getDriver().findElement(By.xpath("//span[@style=\"font-weight:600\"]")).getText();
+////		System.out.println(evalid);
+////		newWriteToExcelLibrary = new NewWriteToExcelLibrary();
+////		newWriteToExcelLibrary.setValues(1, 24, evalid);
+////		Assert.assertTrue(rsreg.rsRegistrationValidation(getDriver()));
+//		Log.endTestCase("rsRegistrationtest Test");
+//	}
 
 //	@Test(priority = 5, groups = { "Smoke",
 //			"Sanity" }, dataProvider = "RS_Registration_Admin", dataProviderClass = DataProviderEDM.class)
@@ -117,28 +117,34 @@ public class RSRegistration_ScheduleAssignByAdminTest extends BaseEDM {
 //		Log.endTestCase("rsRegistredCustomerDataValidationCase");
 //	}
 //
-//	@Test(priority = 6, groups = { "Smoke",
-//			"Sanity" }, dataProvider = "RS_Registration_Admin", dataProviderClass = DataProviderEDM.class)
-//	public void rsRegistredCustomerScheduleAssignByAdminCase(HashMap<String, String> hashMapValue) throws Throwable {
-//		getDriver().get(prop.getProperty("dev_admin_url"));
-//		Log.startTestCase("rsRegistredCustomerScheduleAssignByAdminCase");
-//		adminlogin = new AdminAccountLoginPage();
-//		adminlogin.login(hashMapValue.get("ValidLoginID"), hashMapValue.get("ValidPass"));
-//		rsScheduleAssignByAdmin = new RsScheduleAssignByAdminPage();
-//		rsScheduleAssignByAdmin.rsRegistredCustomerSelecting(hashMapValue.get("SelectedProgram"),
-//				hashMapValue.get("EvalID"));
-//		rsScheduleAssignByAdmin.rsRegisterdCustomerGeneralHomeInformation(hashMapValue.get("Account"), hashMapValue.get("Meter"),
-//				hashMapValue.get("HomeType"), hashMapValue.get("DoYouOwn"), hashMapValue.get("RenatalProperty"),
-//				hashMapValue.get("YearBuilt"), hashMapValue.get("SqrFootage"), hashMapValue.get("Occupants"),
-//				hashMapValue.get("Bedrooms"), hashMapValue.get("Foundation"), hashMapValue.get("Orientation"),
-//				hashMapValue.get("PrimaryHeatingType"), hashMapValue.get("TypeOfHeating"),
-//				hashMapValue.get("HVACUnits"), hashMapValue.get("WaterHeatingType"), hashMapValue.get("WaterHeaters"),
-//				hashMapValue.get("Refrigerators"), hashMapValue.get("ProgThermoStat"),
+	@Test(priority = 6, groups = { "Smoke",
+			"Sanity" }, dataProvider = "RS_Registration_Admin", dataProviderClass = DataProviderEDM.class)
+	public void rsRegistredCustomerScheduleAssignByAdminCase(HashMap<String, String> hashMapValue) throws Throwable {
+		getDriver().get(prop.getProperty("dev_admin_url"));
+		Log.startTestCase("rsRegistredCustomerScheduleAssignByAdminCase");
+		adminlogin = new AdminAccountLoginPage();
+		adminlogin.login(hashMapValue.get("ValidLoginID"), hashMapValue.get("ValidPass"));
+		rsScheduleAssignByAdmin = new RsScheduleAssignByAdminPage();
+		rsScheduleAssignByAdmin.rsRegistredCustomerSelecting(hashMapValue.get("SelectedProgram"),
+				hashMapValue.get("EvalID"));
+//		rsScheduleAssignByAdmin.rsRegisterdCustomerGeneralHomeInformation(hashMapValue.get("Account"),
+//				hashMapValue.get("Meter"), hashMapValue.get("HomeType"), hashMapValue.get("DoYouOwn"),
+//				hashMapValue.get("RenatalProperty"), hashMapValue.get("YearBuilt"), hashMapValue.get("SqrFootage"),
+//				hashMapValue.get("Occupants"), hashMapValue.get("Bedrooms"), hashMapValue.get("Foundation"),
+//				hashMapValue.get("Orientation"), hashMapValue.get("PrimaryHeatingType"),
+//				hashMapValue.get("TypeOfHeating"), hashMapValue.get("HVACUnits"), hashMapValue.get("WaterHeatingType"),
+//				hashMapValue.get("WaterHeaters"), hashMapValue.get("Refrigerators"), hashMapValue.get("ProgThermoStat"),
 //				hashMapValue.get("InternetAccess"), hashMapValue.get("WIFIEnabled"),
 //				hashMapValue.get("BuySellingHome"));
-////		rsScheduleAssignByAdmin.rsRegisterdCustomerScheduleAssign(hashMapValue.get("SelectAdvisor"), hashMapValue.get("PaymentMethod"), hashMapValue.get("AppoinmentType"), hashMapValue.get("ScheduledDate"), hashMapValue.get("ScheduledTime"));
-//		Log.endTestCase("rsRegistredCustomerScheduleAssignByAdminCase");
-//	}
+//		rsScheduleAssignByAdmin.rsRegisterdCustomerScheduleAssign(hashMapValue.get("SelectAdvisor"),
+//				hashMapValue.get("PaymentMethod"), hashMapValue.get("AppoinmentType"),
+//				hashMapValue.get("ScheduledDate"), hashMapValue.get("ScheduledTime"));
+		rsScheduleAssignByAdmin.rsRegisterdCustomer_NewSchedule_AssignAdvisor(hashMapValue.get("CallLog"),
+				hashMapValue.get("CallDeposition"), hashMapValue.get("DoYouOwn"), hashMapValue.get("RenatalProperty"),
+				hashMapValue.get("SqrFootage"), hashMapValue.get("ScheduledMonth"), hashMapValue.get("ScheduledDate"),
+				hashMapValue.get("ScheduledTime"));
+		Log.endTestCase("rsRegistredCustomerScheduleAssignByAdminCase");
+	}
 //	***************if Evaluation is in Scheduled***************************************
 //	@Test(priority = 7, groups = { "Smoke",
 //			"Sanity" }, dataProvider = "RS_Registration_Admin", dataProviderClass = DataProviderEDM.class)

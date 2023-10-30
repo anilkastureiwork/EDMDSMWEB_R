@@ -124,7 +124,8 @@ public class RSRegistrationScheduleAssignByCustomerTest extends BaseEDM {
 		rssched = new RsScheduleByCustomer();
 		rssched.rsSchedule(hashMapValue.get("OwnerSelect"), hashMapValue.get("RentalPSelect"),
 				hashMapValue.get("SqFoot"));
-		rssched.rsScheduleInPerson(hashMapValue.get("FromDate"), hashMapValue.get("ToDate"));
+//		rssched.rsNewScheduleInPersonAppoinment(hashMapValue.get("Month"), hashMapValue.get("Date"), hashMapValue.get("Time"));
+		rssched.rsNewScheduleVirtualAppoinment(hashMapValue.get("Month"), hashMapValue.get("Date"), hashMapValue.get("Time"));
 		rssched.rsPayment(hashMapValue.get("PaymentMethod"), hashMapValue.get("CreditcardNumber"),
 				hashMapValue.get("CVV"), hashMapValue.get("ExpiryMonth"), hashMapValue.get("ExpiryYeare"),
 				hashMapValue.get("NameOnCreditCard"), hashMapValue.get("BillingAddress"), hashMapValue.get("City"),

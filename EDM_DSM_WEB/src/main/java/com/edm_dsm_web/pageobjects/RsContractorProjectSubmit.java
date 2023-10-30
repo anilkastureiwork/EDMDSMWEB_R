@@ -679,7 +679,7 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		if (TVAPreferredAirSourceSelec.equals("yes")) {
 			action.JSClick(getDriver(), TVAPreferredAirSourceSelect);// HVAC System
 		}
-		action.moveToElement(getDriver(), measuresSelectContinueBtn);
+		action.explicitWait(getDriver(), measuresSelectContinueBtn);
 		action.JSClick(getDriver(), measuresSelectContinueBtn);
 		action.fluentWait(getDriver(), projectDetailsContinueBtn);
 	}
@@ -731,6 +731,7 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.selectByVisibleText(yes, atticInsulationFinanced);
 		action.type(atticInsulationFinanceAmount, financedAmount);
 		action.selectByVisibleText(finaby, atticInsulationFinancedBy);
+		
 		action.explicitWait(getDriver(), atticInsulationIntialRValue);
 		action.type(atticInsulationIntialRValue, intialRValue);
 		action.type(atticInsulationCoverageArea, coveragearea);
@@ -755,14 +756,15 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.selectByVisibleText(finby, geothermalHeatPumpFinancedBy);
 
 		action.JSClick(getDriver(), geothermalHeatAHRICertificateNumber_NO);
-//		action.fluentWait(getDriver(), geothermalHeatAHRICertificateNumber);
+		action.fluentWait(getDriver(), geothermalHeatAHRICertificateNumber);
 		action.explicitWait(getDriver(), geothermalHeatAHRICertificateNumber);
 		action.type(geothermalHeatAHRICertificateNumber, certificateNo);
+		action.selectByVisibleText(oldSystemAge, geothermalHeatAHRIOldSystemAge);
 		action.selectByVisibleText(oldSystemType, geothermalHeatAHRIOldSystemType);
 		action.selectByVisibleText(oldSystemSize, geothermalHeatAHRIOldSystemSize);
-		action.selectByVisibleText(oldSystemAge, geothermalHeatAHRIOldSystemAge);
+		
 		action.selectByVisibleText(pakage, geothermalHeatAHRIPakage);
-//		action.fluentWait(getDriver(), geothermalHeatAHRINewSystemBrand);
+		action.fluentWait(getDriver(), geothermalHeatAHRINewSystemBrand);
 		action.explicitWait(getDriver(), geothermalHeatAHRINewSystemBrand);
 		action.type(geothermalHeatAHRINewSystemBrand, newSystemBrand);
 		action.type(geothermalHeatAHRIOutdoorModelNo, outdoorModel);
@@ -775,7 +777,7 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.type(geothermalHeatAHRISystemRatingSEER, seer);
 		action.type(geothermalHeatAHRISystemRatingEER, eer);
 		action.type(geothermalHeatAHRICOP, cop);
-		action.JSClick(getDriver(), projectSaveDraftBtn);
+//		action.JSClick(getDriver(), projectSaveDraftBtn);
 
 	}
 
@@ -794,24 +796,25 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.fluentWait(getDriver(), centralAirCondAHRICertificateNumber);
 		action.explicitWait(getDriver(), centralAirCondAHRICertificateNumber);
 		action.type(centralAirCondAHRICertificateNumber, certificateNum);
+		action.selectByVisibleText(oldAge, centralAirCondAHRIOldSystemAge);
+		action.selectByVisibleText(oldSize, centralAirCondAHRIOldSystemSize);
+		action.selectByVisibleText(oldType, centralAirCondAHRIOldSystemType);
 		action.selectByVisibleText(pakage, centralAirCondAHRIPakage);
 		action.fluentWait(getDriver(), centralAirCondAHRINewSystemBrand);
-		action.pageLoadTimeOut(getDriver());
+		action.explicitWait(getDriver(), centralAirCondAHRINewSystemBrand);
 		action.type(centralAirCondAHRINewSystemBrand, newSystemBrand);
 		action.type(centralAirCondAHRIOutdoorModelNum, outdoor);
 		action.type(centralAirCondAHRIIndoorModelNum, indoor);
-		// action.type(centralAirCondAHRIEvaporatorCoilNum, coilNum);
+	 action.type(centralAirCondAHRIEvaporatorCoilNum, coilNum);
 		action.type(centralAirCondAHRIBtu, btu);
 		action.selectByVisibleText(systemSize, centralAirCondAHRISystemSize);
 		action.selectByVisibleText(systemRating, centralAirCondAHRISystemRating);
 		action.fluentWait(getDriver(), centralAirCondAHRISystemRatingSEER);
-		action.pageLoadTimeOut(getDriver());
+		action.explicitWait(getDriver(), centralAirCondAHRISystemRatingSEER);
 		action.type(centralAirCondAHRISystemRatingSEER, seer);
 		action.type(centralAirCondAHRISystemRatingEER, eer);
-		action.selectByVisibleText(oldAge, centralAirCondAHRIOldSystemAge);
-		action.selectByVisibleText(oldSize, centralAirCondAHRIOldSystemSize);
-		action.selectByVisibleText(oldType, centralAirCondAHRIOldSystemType);
-		action.JSClick(getDriver(), projectSaveDraftBtn);
+		
+//		action.JSClick(getDriver(), projectSaveDraftBtn);
 
 	}
 
@@ -825,7 +828,7 @@ public class RsContractorProjectSubmit extends BaseEDM {
 //		action.type(TuneUpFinancedAmount, financedAmount);
 //		action.selectByVisibleText(finby, TuneUpFinancedBy);
 //		action.JSClick(getDriver(), TuneUpAHRICertificateNumber_No);
-		action.explicitWait(getDriver(), TuneUpAHRIApproxAgeOfSystem);
+		action.explicitWait(getDriver(), TuneUpAHRINoOfUnitsTunedUp);
 		action.selectByVisibleText(noOfUnits, TuneUpAHRINoOfUnitsTunedUp);
 		action.selectByVisibleText(approxAge, TuneUpAHRIApproxAgeOfSystem);
 //		action.type(TuneUpAHRICertificateNumber, certificateNum);
@@ -873,8 +876,8 @@ public class RsContractorProjectSubmit extends BaseEDM {
 //		action.selectByVisibleText(yes, windowFinanced);
 //		action.type(windowFinancedAmount, financedAmount);
 //		action.selectByVisibleText(finby, windowFinancedBy);
-		action.selectByVisibleText(oldWindowtype, windowOldWindowType);
 		action.type(windowInstallQuantity, installquantity);
+		action.selectByVisibleText(oldWindowtype, windowOldWindowType);
 		action.type(windowReplacementUFactor, ufactor);
 		action.type(windowReplacementSHGC, shgc);
 	}
@@ -894,9 +897,9 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.fluentWait(getDriver(), dualFuelHeatPumpAHRICertificateNumber);
 		action.explicitWait(getDriver(), dualFuelHeatPumpAHRICertificateNumber);
 		action.type(dualFuelHeatPumpAHRICertificateNumber, certificatNum);
-		action.selectByVisibleText(oldSize, dualFuelHeatPumpAHRIOldSystemSize);
 		action.selectByVisibleText(oldAge, dualFuelHeatPumpAHRIOldSystemAge);
 		action.selectByVisibleText(oldType, dualFuelHeatPumpAHRIOldSystemType);
+		action.selectByVisibleText(oldSize, dualFuelHeatPumpAHRIOldSystemSize);
 		action.selectByVisibleText(pakage, dualFuelHeatPumpAHRIPakage);
 		action.fluentWait(getDriver(), dualFuelHeatPumpAHRINewSytemBrand);
 		action.explicitWait(getDriver(), dualFuelHeatPumpAHRINewSytemBrand);
@@ -925,12 +928,17 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.type(airSourceHeatPumpFinancedAmount, financedAmount);
 		action.selectByVisibleText(finby, airSourceHeatPumpFinancedBy);
 		action.JSClick(getDriver(), airSourceHeatPumpAHRICertificateNumber_No);
+		
 		action.fluentWait(getDriver(), airSourceHeatPumpAHRINoOfSystem);
 		action.explicitWait(getDriver(), airSourceHeatPumpAHRINoOfSystem);
-		action.type(airSourceHeatPumpAHRINoOfSystem, noOfSystem);
 		action.type(airSourceHeatPumpAHRICertificateNumber, certificatNum);
+		action.selectByVisibleText(oldSize, airSourceHeatPumpAHRIOldSystemSize);
+		action.selectByVisibleText(oldType, airSourceHeatPumpAHRIOldSystemType);
+		action.selectByVisibleText(oldAge, airSourceHeatPumpAHRIOldSystemAge);
+		action.type(airSourceHeatPumpAHRINoOfSystem, noOfSystem);
 		action.selectByVisibleText(type, airSourceHeatPumpAHRIType);
 		action.selectByVisibleText(pakage, airSourceHeatPumpAHRIPakage);
+		
 		action.fluentWait(getDriver(), airSourceHeatPumpAHRINewSytemBrand);
 		action.explicitWait(getDriver(), airSourceHeatPumpAHRINewSytemBrand);
 		action.type(airSourceHeatPumpAHRINewSytemBrand, brand);
@@ -939,14 +947,13 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.type(airSourceHeatPumpAHRIBtu, btu);
 		action.selectByVisibleText(size, airSourceHeatPumpAHRISystemSize);
 		action.selectByVisibleText(systemrating, airSourceHeatPumpAHRISystemRating);
+		
 		action.fluentWait(getDriver(), airSourceHeatPumpAHRISystemRatingSEER);
 		action.explicitWait(getDriver(), airSourceHeatPumpAHRISystemRatingSEER);
 		action.type(airSourceHeatPumpAHRISystemRatingSEER, seer);
 		action.type(airSourceHeatPumpAHRISystemRatingEER, eer);
 		action.type(airSourceHeatPumpAHRISystemRatingHSPF, hspf);
-		action.selectByVisibleText(oldSize, airSourceHeatPumpAHRIOldSystemSize);
-		action.selectByVisibleText(oldAge, airSourceHeatPumpAHRIOldSystemAge);
-		action.selectByVisibleText(oldType, airSourceHeatPumpAHRIOldSystemType);
+		
 	}
 
 	public void rsContractorCustomerProjectDetails_MiniSplit(String installDate, String installCost, String yes,
@@ -961,13 +968,16 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.type(miniSplitFinancedAmount, financedAmount);
 		action.selectByVisibleText(finby, miniSplitFinancedBy);
 		action.JSClick(getDriver(), miniSplitAHRICertificateNumber_No);
-		Thread.sleep(10000);
-//		action.fluentWait(getDriver(), miniSplitAHRICertificateNumber);
+//		Thread.sleep(10000);
+		action.fluentWait(getDriver(), miniSplitAHRICertificateNumber);
 		action.explicitWait(getDriver(), miniSplitAHRICertificateNumber);
 		action.type(miniSplitAHRICertificateNumber, certificatNum);
+		action.selectByVisibleText(oldSize, miniSplitAHRIOldSystemSize);
+		action.selectByVisibleText(oldAge, miniSplitAHRIOldSystemAge);
+		action.selectByVisibleText(oldType, miniSplitAHRIOldSystemType);
 		action.selectByVisibleText(pakage, miniSplitAHRIPakage);
-		Thread.sleep(10000);
-//		action.fluentWait(getDriver(), miniSplitAHRILocation);
+//		Thread.sleep(10000);
+		action.fluentWait(getDriver(), miniSplitAHRILocation);
 		action.explicitWait(getDriver(), miniSplitAHRILocation);
 		action.selectByVisibleText(location, miniSplitAHRILocation);
 		action.selectByVisibleText(ductSealed, miniSplitAHRIDuctSealed);
@@ -982,9 +992,7 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.explicitWait(getDriver(), miniSplitAHRISystemRatingSEER);
 		action.type(miniSplitAHRISystemRatingSEER, seer);
 		action.type(miniSplitAHRISystemRatingEER, eer);
-		action.selectByVisibleText(oldSize, miniSplitAHRIOldSystemSize);
-		action.selectByVisibleText(oldAge, miniSplitAHRIOldSystemAge);
-		action.selectByVisibleText(oldType, miniSplitAHRIOldSystemType);
+		
 	}
 
 	public void rsContractorCustomerProjectDetails_TVAPreferredAirSourceHeatPump(String installDate, String installCost,
@@ -999,13 +1007,16 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.type(TVAPreferredAirFinancedAmount, financedAmount);
 		action.selectByVisibleText(finby, TVAPreferredAirFinancedBy);
 		action.JSClick(getDriver(), TVAPreferredAirAHRICertificateNumber_No);
-		Thread.sleep(10000);
-//		action.fluentWait(getDriver(), TVAPreferredAirAHRICertificateNumber);
+//		Thread.sleep(10000);
+		action.fluentWait(getDriver(), TVAPreferredAirAHRICertificateNumber);
 		action.explicitWait(getDriver(), TVAPreferredAirAHRICertificateNumber);
 		action.type(TVAPreferredAirAHRICertificateNumber, certificatNum);
+		action.selectByVisibleText(oldSize, TVAPreferredAirAHRIOldSystemSize);
+		action.selectByVisibleText(oldAge, TVAPreferredAirAHRIOldSystemAge);
+		action.selectByVisibleText(oldType, TVAPreferredAirAHRIOldSystemType);
 		action.selectByVisibleText(pakage, TVAPreferredAirAHRIPakage);
-		Thread.sleep(10000);
-//		action.fluentWait(getDriver(), TVAPreferredAirAHRIDuctType);
+//		Thread.sleep(10000);
+		action.fluentWait(getDriver(), TVAPreferredAirAHRIDuctType);
 		action.explicitWait(getDriver(), TVAPreferredAirAHRIDuctType);
 		action.selectByVisibleText(ductType, TVAPreferredAirAHRIDuctType);
 		action.type(TVAPreferredAirAHRINewSytemBrand, brand);
@@ -1020,9 +1031,7 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.type(TVAPreferredAirAHRISystemRatingSEER, seer);
 		action.type(TVAPreferredAirAHRISystemRatingEER, eer);
 		action.type(TVAPreferredAirAHRIHSPF, hspf);
-		action.selectByVisibleText(oldSize, TVAPreferredAirAHRIOldSystemSize);
-		action.selectByVisibleText(oldAge, TVAPreferredAirAHRIOldSystemAge);
-		action.selectByVisibleText(oldType, TVAPreferredAirAHRIOldSystemType);
+		
 	}
 
 	public void rsContractorCustomerProjectDetails_FloorInsulation(String installDate, String installCost, String yes,
@@ -1057,18 +1066,18 @@ public class RsContractorProjectSubmit extends BaseEDM {
 		action.explicitWait(getDriver(), projectDetailsContinueBtn);
 		action.JSClick(getDriver(), projectDetailsContinueBtn);
 		Thread.sleep(3000);
-//		String upgradID = getDriver()
-//				.findElement(By.xpath("(//label[normalize-space()='Upgrade ID']//following::label)[1]")).getText();
-//		System.out.println("ProjectID:" + upgradID);
-//		newWriteToExcel = new NewWriteToExcelLibrary();
-//		newWriteToExcel.setValuesInRS_CustomerReadyForInspection(1, 50, upgradID);
-//		action.moveToElement(getDriver(), projectDocumentUploadBtn);
-//		action.type(projectDocumentUploadBtn, "C:/Users/anil.k/Desktop/EDM_Documents/Project_document.pdf");
-//		Thread.sleep(3000);
-//
-//		action.explicitWait(getDriver(), projectSubmitBtn);
-//		action.JSClick(getDriver(), projectSubmitBtn);
-//		action.click(getDriver(), projectSubmitBtn);// same id for OK and project submit
+		String upgradID = getDriver()
+				.findElement(By.xpath("(//label[normalize-space()='Upgrade ID']//following::label)[1]")).getText();
+		System.out.println("ProjectID:" + upgradID);
+		newWriteToExcel = new NewWriteToExcelLibrary();
+		newWriteToExcel.setValuesInRS_CustomerReadyForInspection(1, 50, upgradID);
+		action.explicitWait(getDriver(), projectDocumentUploadBtn);
+		action.type(projectDocumentUploadBtn, "C:/Users/anil.k/Desktop/EDM_Documents/Project_document.pdf");
+		Thread.sleep(3000);
+
+		action.explicitWait(getDriver(), projectSubmitBtn);
+		action.JSClick(getDriver(), projectSubmitBtn);
+		action.click(getDriver(), projectSubmitBtn);// same id for OK and project submit
 
 	}
 

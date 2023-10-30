@@ -678,9 +678,9 @@ public class ActionDrivers extends BaseEDM implements Actioninterfaces {
 	public void fluentWait(WebDriver driver, WebElement element) {
 		Wait<WebDriver> wait = null;
 		try {
-			wait = new FluentWait<WebDriver>((WebDriver) driver).withTimeout(Duration.ofSeconds(30))
+			wait = new FluentWait<WebDriver>((WebDriver) driver).withTimeout(Duration.ofSeconds(20))
 					.pollingEvery(Duration.ofSeconds(5)).ignoring(StaleElementReferenceException.class);
-			wait.until(ExpectedConditions.visibilityOf(element));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 //			element.click();
 		} catch (Exception e) {
 		}
@@ -695,7 +695,7 @@ public class ActionDrivers extends BaseEDM implements Actioninterfaces {
 	@Override
 	public void explicitWait(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-		wait.until(ExpectedConditions.elementToBeClickable(element));
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	@Override

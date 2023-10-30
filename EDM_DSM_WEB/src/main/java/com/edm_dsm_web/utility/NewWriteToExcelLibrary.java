@@ -19,11 +19,10 @@ public class NewWriteToExcelLibrary {
 
 	public void setValues(int rowno, int cellno, String cellval) throws IOException {
 		// Create an object of File class to open xlsx file
-		File file = new File("D:\\Automation_Selenium_Java\\EDM_DSM_WEB\\src\\test\\resources\\TestData.xlsx");
+		File file = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx");
 
 		// Create an object of FileInputStream class to read excel file
 		FileInputStream inputStream = new FileInputStream(file);
-
 		// creating workbook instance that refers to .xls file
 		wb = new XSSFWorkbook(inputStream);
 
@@ -38,7 +37,7 @@ public class NewWriteToExcelLibrary {
 		row.createCell(cellno).setCellValue(cellval);// 1126178
 		// write the data in excel using output stream
 		FileOutputStream outputStream = new FileOutputStream(
-				"D:\\Automation_Selenium_Java\\EDM_DSM_WEB\\src\\test\\resources\\TestData.xlsx");
+				System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx");
 		wb.write(outputStream);
 		wb.close();
 
@@ -46,7 +45,7 @@ public class NewWriteToExcelLibrary {
 
 	public void setValuesInCustomer(int rowno, int cellno, String cellval) throws IOException {
 		// Create an object of File class to open xlsx file
-		File file = new File("D:\\Automation_Selenium_Java\\EDM_DSM_WEB\\src\\test\\resources\\TestData.xlsx");
+		File file = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx");
 
 		// Create an object of FileInputStream class to read excel file
 		FileInputStream inputStream = new FileInputStream(file);
@@ -65,14 +64,14 @@ public class NewWriteToExcelLibrary {
 		row.createCell(cellno).setCellValue(cellval);// 1126178
 		// write the data in excel using output stream
 		FileOutputStream outputStream = new FileOutputStream(
-				"D:\\Automation_Selenium_Java\\EDM_DSM_WEB\\src\\test\\resources\\TestData.xlsx");
+				System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx");
 		wb.write(outputStream);
 		wb.close();
 	}
 
 	public void setValuesInHUP_Customer(int rowno, int cellno, String cellval) throws IOException {
 		// Create an object of File class to open xlsx file
-		File file = new File("D:\\Automation_Selenium_Java\\EDM_DSM_WEB\\src\\test\\resources\\TestData.xlsx");
+		File file = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx");
 
 		// Create an object of FileInputStream class to read excel file
 		FileInputStream inputStream = new FileInputStream(file);
@@ -91,13 +90,14 @@ public class NewWriteToExcelLibrary {
 		row.createCell(cellno).setCellValue(cellval);// 1126178
 		// write the data in excel using output stream
 		FileOutputStream outputStream = new FileOutputStream(
-				"D:\\Automation_Selenium_Java\\EDM_DSM_WEB\\src\\test\\resources\\TestData.xlsx");
+				System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx");
 		wb.write(outputStream);
 		wb.close();
 	}
+
 	public void setValuesInRS_CustomerReadyForInspection(int rowno, int cellno, String cellval) throws IOException {
 		// Create an object of File class to open xlsx file
-		File file = new File("D:\\Automation_Selenium_Java\\EDM_DSM_WEB\\src\\test\\resources\\TestData.xlsx");
+		File file = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx");
 
 		// Create an object of FileInputStream class to read excel file
 		FileInputStream inputStream = new FileInputStream(file);
@@ -115,8 +115,7 @@ public class NewWriteToExcelLibrary {
 		// create a cell object to enter value in it using cell Index
 		row.createCell(cellno).setCellValue(cellval);// 1126178
 		// write the data in excel using output stream
-		FileOutputStream outputStream = new FileOutputStream(
-				"D:\\Automation_Selenium_Java\\EDM_DSM_WEB\\src\\test\\resources\\TestData.xlsx");
+		FileOutputStream outputStream = new FileOutputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx");
 		wb.write(outputStream);
 		wb.close();
 	}

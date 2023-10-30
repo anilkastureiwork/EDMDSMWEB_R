@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Automation_Selenium_Java\EDM_DSM_WEB.zip_expanded\EDM_DSM_WEB\rs_contractor_project_testng.xml</span>
+                    <span>C:\Users\anil.k\git\EDM_DSM_WEB_Repo\EDM_DSM_WEB\rs_registration_admin_testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>3 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.edm_dsm_web.testcases.RSContractorProjectSubmitTest" class="method navigator-link" hash-for-method="rsCustomerRegistration_ContractorProjectSubmitcase({DuctSystem=yes, GeothermalHeatPump=yes, DuctInsulationCondition=Excellent, AtticIntialR=30, DualFue...)">rsCustomerRegistration_ContractorProjectSubmitcase({DuctSystem=yes, GeothermalHeatPump=yes, DuctInsulationCondition=Excellent, AtticIntialR=30, DualFue...)</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.edm_dsm_web.testcases.RSRegistration_ScheduleAssignByAdminTest" class="method navigator-link" hash-for-method="rsRegistredCustomerScheduleAssignByAdminCase({=, HomeAddress=1898 Young Ave, Memphis, TN, 38114, Account=4567890, Email=example@yopmail.com, Prim...)">rsRegistredCustomerScheduleAssignByAdminCase({=, HomeAddress=1898 Young Ave, Memphis, TN, 38114, Account=4567890, Email=example@yopmail.com, Prim...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,26 +118,64 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.edm_dsm_web.testcases.RSContractorProjectSubmitTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.edm_dsm_web.testcases.RSRegistration_ScheduleAssignByAdminTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="rsCustomerRegistration_ContractorProjectSubmitcase({DuctSystem=yes, GeothermalHeatPump=yes, DuctInsulationCondition=Excellent, AtticIntialR=30, DualFue...)">
-                  </a> <!-- rsCustomerRegistration_ContractorProjectSubmitcase({DuctSystem=yes, GeothermalHeatPump=yes, DuctInsulationCondition=Excellent, AtticIntialR=30, DualFue...) -->
-                  <span class="method-name">rsCustomerRegistration_ContractorProjectSubmitcase</span>
-                  <span class="parameters">({DuctSystem=yes, GeothermalHeatPump=yes, DuctInsulationCondition=Excellent, AtticIntialR=30, DualFuelHeatPump=yes, AirLeakage=Average, AirBasementSealed=Yes, DuctCondition=Average, DuctSystemSize=2, DuctFinanced=Yes, PhoneNo=1-234-555-9876, DuctLocationWork=Attic, QuantityInstalled=1, Replacement Size=50-60 Gals, AtticTypeInsulation=Blown, WallInsulation=yes, IndoorModelNumber=4444, AirCeilingSealed=Yes, TuneUp=yes, OldSystemType=Heat Pump, CentralAirConditioning=yes, LastName_R=ak, ValidLoginID=anilk.admin, HouseNo=3115, MiniSplit=yes, OldSystemAge=2-5 Years, LastName=ak, OldWindowType=Single, AtticCoverage=200, AirSealing=yes, SelectedProgram=I1129740, DuctType=Ducted, AtticInsulation=yes, WaterHeating=yes, AHRICertificateNumber=8888, Btu=777, AirWalls=Yes, DuctFinancedAmount=50, SystemRating=SEER, SEER/EER=22, ValidPass=Demo@1234, CustomerHomeAddress=106 Everest Cir, Oak Ridge, TN 37830, DuctInstalDate=10/03/2023, OutdoorModelNumber=9999, FloorInsulation=yes, StormWindow=, DuctSealingMaterial=Mastic, NewSystemBrand=23, DuctSealed=Yes, CustomerEmail=rebate1.ak@noemail.com, CustomerRegistration=new, DuctFinancedBy=VMF Off-Bill, ContValidPass=Demo@1234, ReplacementType=Gas, AirAttachGarage=Yes, Window=yes, Packaged=Packaged, COP=5, ZipCode=38118, FirstName=rebate1, DuctInstalCost=500, Replacement Space=Conditioned, SquareFootageInstalled=111, ContValidLoginID=contractor.auto@yopmail.com, AirSourceHeatPump=yes, AtticFinalR=200, UpgradeID=I1129723, TVAPreferredAirSource=yes})</span>
+                  <a name="rsRegistredCustomerScheduleAssignByAdminCase({=, HomeAddress=1898 Young Ave, Memphis, TN, 38114, Account=4567890, Email=example@yopmail.com, Prim...)">
+                  </a> <!-- rsRegistredCustomerScheduleAssignByAdminCase({=, HomeAddress=1898 Young Ave, Memphis, TN, 38114, Account=4567890, Email=example@yopmail.com, Prim...) -->
+                  <span class="method-name">rsRegistredCustomerScheduleAssignByAdminCase</span>
+                  <span class="parameters">({=, HomeAddress=1898 Young Ave, Memphis, TN, 38114, Account=4567890, Email=example@yopmail.com, PrimaryHeatingType=Electric, WaterHeaters=2, Refrigerators=1, Meter=123, HomeType=Condominium, SqrFootage=10001, ValidPass=Demo@1234, ScheduledDate=16, SelectAdvisor=Vrushali HUP Advisor1, Occupants=7, CallLog=Testing, HVACUnits=8, CompanyName=Knoxville Utilities Board, PhoneNo=1-234-555-6789, Foundation=Unconditioned Basement, TypeOfHeating=Baseboard Heaters, YearBuilt=2010, SiteID=, ScheduledTime=09:00 AM, FirstName=Rs1, DoYouOwn=Yes, ProgThermoStat=Yes, ScheduledMonth=Nov, AppoinmentType=On-Site Insp Only, Orientation=East, RenatalProperty=No, WaterHeatingType=Electric, ValidLoginID=anilk.admin, InternetAccess=Yes, WIFIEnabled=Yes, Bedrooms=3, PaymentMethod=TVA Coupon, CallDeposition=Scheduled Inspection/Evaluation, LastName=Test1, BuySellingHome=No, EvalID=1126694, SelectedProgram=Residential Services})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#drpProgramList&quot;}
+  (Session info: chrome=118.0.5993.117)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [189987ea5c6d9151f2c66b12814d8020, findElement {using=id, value=drpProgramList}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.117, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\anil.k\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50686}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50686/devtoo..., se:cdpVersion: 118.0.5993.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 189987ea5c6d9151f2c66b12814d8020
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:461)
+	at com.edm_dsm_web.actiondriver.ActionDrivers.JSClick(ActionDrivers.java:252)
+	at com.edm_dsm_web.pageobjects.RsScheduleAssignByAdminPage.rsRegistredCustomerSelecting(RsScheduleAssignByAdminPage.java:161)
+	at com.edm_dsm_web.testcases.RSRegistration_ScheduleAssignByAdminTest.rsRegistredCustomerScheduleAssignByAdminCase(RSRegistration_ScheduleAssignByAdminTest.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Automation_Selenium_Java\EDM_DSM_WEB.zip_expanded\EDM_DSM_WEB\rs_contractor_project_testng.xml</span>
+            <span class="header-content">C:\Users\anil.k\git\EDM_DSM_WEB_Repo\EDM_DSM_WEB\rs_registration_admin_testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,9 +186,9 @@
     &lt;listener class-name=&quot;com.edm_dsm_web.utility.ListenerClass&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.edm_dsm_web.testcases.RSContractorProjectSubmitTest&quot;/&gt;
+      &lt;class name=&quot;com.edm_dsm_web.testcases.RSRegistration_ScheduleAssignByAdminTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -175,18 +213,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Regression</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">rsCustomerRegistration_ContractorProjectSubmitcase</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
               <span class="test-group-name">Sanity</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">rsCustomerRegistration_ContractorProjectSubmitcase</span>
+                <span class="method-in-group-name">rsRegistredCustomerScheduleAssignByAdminCase</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -194,7 +224,7 @@
               <span class="test-group-name">Smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">rsCustomerRegistration_ContractorProjectSubmitcase</span>
+                <span class="method-in-group-name">rsRegistredCustomerScheduleAssignByAdminCase</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -216,14 +246,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'rsCustomerRegistration_ContractorProjectSubmitcase')
-data.setCell(0, 2, 'com.edm_dsm_web.testcases.RSContractorProjectSubmitTest')
-data.setCell(0, 3, 1253207);
+data.setCell(0, 1, 'rsRegistredCustomerScheduleAssignByAdminCase')
+data.setCell(0, 2, 'com.edm_dsm_web.testcases.RSRegistration_ScheduleAssignByAdminTest')
+data.setCell(0, 3, 33445);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 minutes</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -249,26 +279,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.edm_dsm_web.testcases.RSContractorProjectSubmitTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.edm_dsm_web.testcases.RSRegistration_ScheduleAssignByAdminTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">loadConfig</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setup(edge)</span>
-                <span class="method-start">1830 ms</span>
+                <span class="method-name">setup(Chrome)</span>
+                <span class="method-start">1525 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">rsCustomerRegistration_ContractorProjectSubmitcase({DuctSystem=yes, GeothermalHeatPump=yes, DuctInsulationCondition=Excellent, AtticIntialR=30, DualFue...)</span>
-                <span class="method-start">4413 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">rsRegistredCustomerScheduleAssignByAdminCase({=, HomeAddress=1898 Young Ave, Memphis, TN, 38114, Account=4567890, Email=example@yopmail.com, Prim...)</span>
+                <span class="method-start">4837 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1257914 ms</span>
+                <span class="method-start">38494 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">1258444 ms</span>
+                <span class="method-start">38654 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

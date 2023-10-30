@@ -2,6 +2,8 @@ package com.edm_dsm_web.pageobjects;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.List;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -129,6 +131,27 @@ public class RsScheduleAssignByAdminPage extends BaseEDM {
 	private WebElement assignAppointmentCloseBtn;
 	@FindBy(xpath = "//button[normalize-space()='Ok']")
 	private WebElement assignCalllogDialogOk;
+	// *********New Scheduling**********************************
+	@FindBy(id = "ctl00_Work_uxRadGrid_ctl00_ctl04_uxActionV2")
+	private WebElement newScheduleNow;
+	@FindBy(id = "notes")
+	private WebElement newScheduleCallLog;
+	@FindBy(xpath = "//div[contains(text(),'Select One')]")
+	private WebElement newScheduleCallDeposition;
+	@FindBy(xpath = "//span[normalize-space()='Next']")
+	private WebElement newScheduleNextBtn;
+	@FindBy(id = "ownit")
+	private WebElement newScheduleOwnIt;
+	@FindBy(id = "rental")
+	private WebElement newScheduleRental;
+	@FindBy(id = "Sqfoot")
+	private WebElement newScheduleSquareFoot;
+	@FindBy(xpath = "(//input[@class=\"mud-radio-input\"][@id='In-Person Visit'])[1]")
+	private WebElement newScheduleInPersonVisit;
+	@FindBy(xpath = "(//input[@class=\"mud-radio-input\"][@id='In-Person Visit'])[2]")
+	private WebElement newScheduleVirtualVisit;
+	@FindBy(xpath = "//p[@class='mud-typography mud-typography-body1 mud-typography-align-center']")
+	private WebElement newScheduleCalenderMonth;
 
 	public RsScheduleAssignByAdminPage() {
 		PageFactory.initElements(getDriver(), this);
@@ -237,6 +260,77 @@ public class RsScheduleAssignByAdminPage extends BaseEDM {
 		action.selectByVisibleText(appointmentType, assignAppointmentType);
 		action.click(getDriver(), assigAppointmentSaveBtn);
 		action.click(getDriver(), assignAppointmentCloseBtn);
+
+	}
+
+	public void rsRegisterdCustomer_NewSchedule_AssignAdvisor(String callLog, String callDeposition, String doOwnIt,
+			String renatalProperty, String squareFoot, String month, String date, String time)
+			throws InterruptedException {
+		action.explicitWait(getDriver(), newScheduleNow);
+		action.JSClick(getDriver(), newScheduleNow);
+		action.fluentWait(getDriver(), newScheduleCallLog);
+		action.explicitWait(getDriver(), newScheduleCallLog);
+		action.type(newScheduleCallLog, callLog);
+		action.JSClick(getDriver(), newScheduleCallDeposition);
+		Thread.sleep(3000);
+		List<WebElement> callDeposition1 = getDriver()
+				.findElements(By.cssSelector(".mud-typography.mud-typography-body1"));
+		for (WebElement elem : callDeposition1)
+			try {
+				if (elem.getText().contains(callDeposition)) {
+					elem.click();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		Thread.sleep(3000);
+		action.JSClick(getDriver(), newScheduleNextBtn);
+
+		action.JSClick(getDriver(), newScheduleOwnIt);
+		List<WebElement> doOwnIt1 = getDriver().findElements(By.cssSelector(".mud-typography.mud-typography-body1"));
+		for (WebElement elem : doOwnIt1)
+			try {
+				if (elem.getText().contains(doOwnIt)) {
+					elem.click();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		action.JSClick(getDriver(), newScheduleRental);
+		List<WebElement> renatalProperty1 = getDriver()
+				.findElements(By.cssSelector(".mud-typography.mud-typography-body1"));
+		for (WebElement elem : renatalProperty1)
+			try {
+				if (elem.getText().contains(renatalProperty)) {
+					elem.click();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		action.type(newScheduleSquareFoot, squareFoot);
+		action.JSClick(getDriver(), newScheduleVirtualVisit);
+		action.JSClick(getDriver(), newScheduleNextBtn);
+		action.JSClick(getDriver(), newScheduleCalenderMonth);
+		Thread.sleep(3000);
+		List<WebElement> calenderMonth = getDriver().findElements(By.cssSelector(".mud-picker-month.mud-button-root"));
+		for (WebElement elem : calenderMonth)
+			if (elem.getText().contains(month)) {
+
+				elem.click();
+			}
+		Thread.sleep(3000);
+		List<WebElement> calenderDate = getDriver()
+				.findElements(By.cssSelector(".mud-typography.mud-typography-body2.mud-inherit-text"));
+		for (WebElement elem : calenderDate)
+			if (elem.getText().contains(date)) {
+				elem.click();
+			}
+		Thread.sleep(5000);
+		List<WebElement> calenderTime = getDriver().findElements(By.className("mud-button-label"));
+		for (WebElement elem : calenderTime)
+			if (elem.getText().contains(time)) {
+				elem.click();
+			}
 
 	}
 
